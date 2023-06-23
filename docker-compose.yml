@@ -30,7 +30,7 @@ services:
           devices:
           - driver: nvidia
             count: 1
-            capabilities: gpu
+            capabilities: [gpu]
 
   postgres:
     image: postgres:12-alpine
