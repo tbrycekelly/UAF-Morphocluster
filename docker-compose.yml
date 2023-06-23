@@ -29,8 +29,9 @@ services:
         reservations:
           devices:
           - driver: nvidia
-             capabilities: [gpu]
-             
+            count: 1
+            capabilities: gpu
+
   postgres:
     image: postgres:12-alpine
     environment:
