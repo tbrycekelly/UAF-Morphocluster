@@ -24,13 +24,13 @@ services:
       - HISTFILE=/data/.bash_history
       - FLASK_APP=morphocluster
     # # TODO: Uncomment this block to use the host's GPU inside the container
-     deploy:
-       resources:
-         reservations:
-           devices:
-             - driver: nvidia
-             - capabilities:
-               - gpu
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+              - capabilities:
+                - gpu
   postgres:
     image: postgres:12-alpine
     environment:
